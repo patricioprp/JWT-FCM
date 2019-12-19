@@ -89,7 +89,7 @@ class AuthController extends Controller
      * 
      * @return \Illuminate\Http\JsonResponse
      */
-    public function saveTokenFCM($token,$id)
+    public function saveTokenFCM($id,$token)
     {
       $user = User::find($id);
       $user->token_fcm=$token;

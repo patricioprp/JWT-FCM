@@ -16,6 +16,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => Hash::make('adminadmin'),
             'name' => 'Administrator',
+            'token_fcm' => 'efefefefef',
         ]);
     }
 }

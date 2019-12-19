@@ -20,19 +20,15 @@
         <script>
         (function (){
             'use:strict';
-
+            let id = 1;
+            let tokenSave = 'updatetoken';
             let login = document.getElementById('login');
             login.addEventListener('click', e=> {
                 e.preventDefault();
-                fetch('http://192.168.1.24:8008/api/auth/login',{
+                fetch('http://192.168.1.24:8008/api/auth/saveTokenFCM/'+id+'/'+tokenSave,{
                     method:'POST',
-                    body:JSON.stringify({
-                        email: document.getElementById('email').value,
-                        password: document.getElementById('password').value
-                    }),
                     headers:{ 
-        "Content-Type": "application/json",
-        "X-Requested-With": "XMLHttpRequest"
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xOTIuMTY4LjEuMjQ6ODAwOFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTU3NjMyNzEyOSwiZXhwIjoxNTc2MzMwNzI5LCJuYmYiOjE1NzYzMjcxMjksImp0aSI6IjhSMHFSRUtUSzNFck5qNHEiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.HODg_wT0gbfAYLxwQ1ml-RQtxJIHW3SXNIFw3fv6VFo"
         },
                 })
                 .then(response => {
