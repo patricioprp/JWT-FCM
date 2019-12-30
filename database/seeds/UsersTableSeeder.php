@@ -11,12 +11,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        User::truncate();
+        
         User::create([
             'email' => 'admin@admin.com',
             'password' => Hash::make('adminadmin'),
             'name' => 'Administrator',
-            'token_fcm' => 'efefefefef',
+            'token_fcm' => 'efefjijiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiijijijijijijijijijijijijijijijijijijijiefefef',
         ]);
     }
 }
