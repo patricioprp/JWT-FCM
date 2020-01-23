@@ -10,4 +10,8 @@ Route::group([
     Route::post('payload', 'AuthController@payload');
     //Guardar el token FCM
     Route::post('saveTokenFCM/{id}/{token}','AuthController@saveTokenFCM');
+    //Guardar mensajes FCM
+    Route::post('saveMessage/{title}/{text}/{id}','UserController@saveMessages');
+    //Mostrar Mensajes
+    Route::post('showMEssage/{id}','UserController@showMessages');
 });
